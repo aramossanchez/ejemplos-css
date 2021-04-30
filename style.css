@@ -4,7 +4,8 @@ FUENTES
 *******************************************************************************************************************************************************************************
 ******************************************************************************************************************************************************************************/
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');/*BOTON ENVIAR CON BORDE DESIGUAL*/
+@import url('https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap');/*HEADER CON BORDER Y LI CON COLOR GRADIANTE*/
 
 *{
     margin: 0;
@@ -41,12 +42,12 @@ article{
     align-items: center;
     height: 50vh;
     border: 1px solid black;
-    margin-bottom: 2em;
+    margin-top: 2em;
 }
 
 /******************************************************************************************************************************************************************************
 *******************************************************************************************************************************************************************************
-BOTON ENVIAR
+BOTON ENVIAR CON BORDE DESIGUAL
 *******************************************************************************************************************************************************************************
 ******************************************************************************************************************************************************************************/
 
@@ -65,7 +66,6 @@ BOTON ENVIAR
     align-items: center;
     position: absolute;
     top: 0;
-    font-size: 150%;
 }
 
 #boton-borde-desigual form div{
@@ -125,6 +125,70 @@ BOTON ENVIAR
 
 /******************************************************************************************************************************************************************************
 *******************************************************************************************************************************************************************************
+HEADER CON BORDER Y LI CON COLOR GRADIANTE
+*******************************************************************************************************************************************************************************
+******************************************************************************************************************************************************************************/
+
+#header-gradiante{
+    background-color: rgb(172, 171, 171);
+    font-family: 'Zen Dots', cursive;
+}
+
+#header-gradiante div{
+    color: white;
+    padding: 0.5em;
+    background-color: black;
+    border-style: solid;
+    border-width: 2px;
+    border-image: conic-gradient(red, yellow, lime, aqua, blue, magenta, red) 1;
+    transition: 0.5s;
+}
+
+#header-gradiante li{
+    all: unset;
+    padding: 0 1em;
+    font-size: 70%;
+    background: -webkit-linear-gradient(left, #e66465 20%, #67ff62 70%, #9198e5 80%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: 0.5s;
+}
+
+#header-gradiante li:hover{
+    cursor: pointer;
+    filter: brightness(3);
+}
+
+#header-con-imagenes{
+    margin-top: 2em;
+    width: 80%;
+}
+
+#header-con-imagenes ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    text-align: center;
+}
+
+#header-con-imagenes li{
+    width: 25%;
+    all: unset;
+    font-size: 100%;
+    background: none;
+    -webkit-background-clip: none;
+    -webkit-text-fill-color: none;
+    transition: 0.5s;
+}
+
+#header-con-imagenes img{
+    width: 30%;
+    background: -webkit-linear-gradient(left, #e66465 20%, #67ff62 70%, #9198e5 80%);
+    border-radius: 50px;
+}
+
+/******************************************************************************************************************************************************************************
+*******************************************************************************************************************************************************************************
 *******************************************************************************************************************************************************************************
 *******************************************************************************************************************************************************************************
 VERSION ORDENADOR
@@ -145,5 +209,15 @@ VERSION ORDENADOR
 
     article{
         width: 48%;
+    }
+
+    #header-gradiante li{/*HACEMOS QUE EL 'HEADER CON BORDER Y LI CON COLOR GRADIANTE' SE VEA GRANDE EN LA VERSION ORDENADOR*/
+        all: unset;
+        padding: 0 1em;
+        font-size: 140%;
+        background: -webkit-linear-gradient(left, #e66465 20%, #67ff62 70%, #9198e5 80%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        transition: 0.5s;
     }
 }
